@@ -2,6 +2,9 @@ package lotto;
 
 import camp.nextstep.edu.missionutils.Console;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Application {
     public static void main(String[] args) {
         // TODO: 프로그램 구현
@@ -10,19 +13,18 @@ public class Application {
             String inputMoney = Console.readLine();
             int ticketcount = validateTicketCount(inputMoney);
             LottoSystemManaging lottoSystemManaging = new LottoSystemManaging();
-
-
+            WinningNumbersManaging winningNumbers = new WinningNumbersManaging();
+            BonusNumber BonusNumber = new BonusNumber();
 
         } catch (IllegalStateException e) {
             System.out.println(e.getMessage());
-            System.exit(1); // 애플리케이션 종료
+            return; // 애플리케이션 종료
         }
 
 
         // 테스트용
         // TEST
     }
-
     private static int validateTicketCount(String inputMoney) {
         int money;
         try {
@@ -37,15 +39,3 @@ public class Application {
         return money/1000;
     }
 }
-
-
-/*
-사용자에게 입력받음 -> Application
-입력받은 돈으로 코인개수 정하거나 알맞게 들어갔는지 확인하기
-복권 사스템 관리 ( 결과 출력까지 관리 )  LottoSystemManaging
-복권 관리 LottoManaging
-복권 Lotto
-복권 추상 AbstractLotto
-
-
- */
