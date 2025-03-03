@@ -16,8 +16,23 @@ public class Lotto {
         }
     }
 
-    public List<Integer> getNumbers() {
-        return numbers;
+    public boolean contains(int number) {
+        return numbers.contains(number);
+    }
+
+    public int matchCount(List<Integer> otherNumbers) {
+        int count = 0;
+        for (Integer number : numbers) {
+            if (otherNumbers.contains(number)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        return numbers.toString();
     }
 
     // TODO: 추가 기능 구현

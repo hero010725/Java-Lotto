@@ -4,7 +4,6 @@ import camp.nextstep.edu.missionutils.Console;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class WinningNumbersManaging {
     private final List<Integer> numbers;
 
@@ -41,5 +40,4 @@ public class WinningNumbersManaging {
     public void addnumber(int number) {
         numbers.add(number);
     }
-
 }

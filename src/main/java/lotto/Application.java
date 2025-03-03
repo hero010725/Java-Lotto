@@ -48,10 +48,9 @@ public class Application {
     private static void printTickets(List<Lotto> tickets) {
         System.out.println(tickets.size() + "개를 구매했습니다.");
         for (Lotto ticket : tickets) {
-            System.out.println(ticket.getNumbers());
+            System.out.println(ticket);
         }
     }
-
 
     private static void printRankResults(Map<Rank, Integer> results, String inputMoney) {
         System.out.println("당첨 통계 ");
