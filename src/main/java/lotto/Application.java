@@ -66,6 +66,6 @@ public class Application {
         }
         int money = Integer.parseInt(inputMoney.trim());
         double yieldRate = ((double) totalPrize / money) * 100;
-        System.out.println("총 수익률은 " + yieldRate + "% 입니다.");
+        System.out.println("총 수익률은 " + yieldRate + "%입니다.");
     }
 }
